@@ -45,8 +45,10 @@ Link => https://imaginative-mochi-ae0588.netlify.app
    ```
 
 3. Run the app locally
+
    ```bash
    npm run start
+
    ```
 
 ## API
