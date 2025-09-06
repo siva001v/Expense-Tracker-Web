@@ -1,10 +1,10 @@
 import axios from "axios";
-import { ApiConstants } from "../assets/Constants";
 import { getBearerToken } from "../utils/Auth";
 import { toast } from "react-toastify";
+import { API_BASE_URL, API_ENDPOINTS } from "../../api/api-constants";
 
 export const getUser = async () => {
-  const url = ApiConstants.BASEURL + ApiConstants.GETUSER;
+  const url = API_BASE_URL + API_ENDPOINTS.GETUSER;
   const config = {
     headers: {
       Authorization: getBearerToken(),
@@ -27,7 +27,7 @@ export const getUser = async () => {
 };
 
 export const saveProfile = async ({ payload, id }) => {
-  const url = ApiConstants.BASEURL + ApiConstants.GETUSER + `/${id}`;
+  const url = API_BASE_URL + API_ENDPOINTS.GETUSER + `/${id}`;
   const config = {
     headers: {
       Authorization: getBearerToken(),
@@ -50,7 +50,7 @@ export const saveProfile = async ({ payload, id }) => {
 };
 
 export const changeUserPassword = async (payload) => {
-  const url = ApiConstants.BASEURL + ApiConstants.GETCHANGEPASSWORD;
+  const url = API_BASE_URL + API_ENDPOINTS.GETCHANGEPASSWORD;
   const config = {
     headers: {
       Authorization: getBearerToken(),

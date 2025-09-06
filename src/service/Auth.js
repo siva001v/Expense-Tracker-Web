@@ -1,9 +1,9 @@
 import axios from "axios";
-import { ApiConstants } from "../assets/Constants";
 import { toast } from "react-toastify";
+import { API_BASE_URL, API_ENDPOINTS } from "../../api/api-constants";
 
 export const getLogin = async (formData) => {
-  let url = ApiConstants.BASEURL + ApiConstants.LOGIN;
+  let url = API_BASE_URL + API_ENDPOINTS.LOGIN;
 
   try {
     const res = await axios.post(url, formData);
@@ -25,7 +25,7 @@ export const getLogin = async (formData) => {
 };
 
 export const postRegister = async (formData) => {
-  let url = ApiConstants.BASEURL + ApiConstants.REGISTER;
+  let url = API_BASE_URL + API_ENDPOINTS.REGISTER;
 
   try {
     const res = await axios.post(url, formData);

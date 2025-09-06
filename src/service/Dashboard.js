@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getBearerToken } from "../utils/Auth";
-import { ApiConstants } from "../assets/Constants";
 import { toast } from "react-toastify";
+import { API_BASE_URL, API_ENDPOINTS } from "../../api/api-constants";
 
 export const defaultSummary = [
   {
@@ -49,7 +49,7 @@ export const getExpenses = async (filterQuery) => {
   };
   try {
     const res = await axios.get(
-      ApiConstants.BASEURL + ApiConstants.GETEXPENSES + filterQuery,
+      API_BASE_URL + API_ENDPOINTS.GETEXPENSES + filterQuery,
       config
     );
     if (res.status == 200 && res.data.data) {
@@ -70,7 +70,7 @@ export const deleteExpense = async (expenseId) => {
       Authorization: getBearerToken(),
     },
   };
-  let url = ApiConstants.BASEURL + ApiConstants.GETEXPENSES + `/${expenseId}`;
+  let url = API_BASE_URL + API_ENDPOINTS.GETEXPENSES + `/${expenseId}`;
   try {
     const res = await axios.delete(url, config);
     if (res.status == 200 && res.data.data) {
@@ -95,10 +95,7 @@ export const getTrends = async () => {
     },
   };
   try {
-    const res = await axios.get(
-      ApiConstants.BASEURL + ApiConstants.GETTRENDS,
-      config
-    );
+    const res = await axios.get(API_BASE_URL + API_ENDPOINTS.GETTRENDS, config);
     if (res.status == 200 && res.data.data) {
       return res.data.data;
     } else {
@@ -120,7 +117,7 @@ export const getSummary = async () => {
   };
   try {
     const res = await axios.get(
-      ApiConstants.BASEURL + ApiConstants.GETSUMMARY,
+      API_BASE_URL + API_ENDPOINTS.GETSUMMARY,
       config
     );
     if (res.status == 200 && res.data.data) {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getBearerToken } from "../utils/Auth";
-import { ApiConstants } from "../assets/Constants";
 import { toast } from "react-toastify";
+import { API_BASE_URL, API_ENDPOINTS } from "../../api/api-constants";
 
 export const getExpense = async (id) => {
   let config = {
@@ -9,7 +9,7 @@ export const getExpense = async (id) => {
       Authorization: getBearerToken(),
     },
   };
-  let url = ApiConstants.BASEURL + ApiConstants.GETEXPENSES + `/${id}`;
+  let url = API_ENDPOINTS + API_ENDPOINTS.GETEXPENSES + `/${id}`;
   try {
     const res = await axios.get(url, config);
     if (res.status == 200 && res.data.data) {
@@ -30,8 +30,7 @@ export const getExpense = async (id) => {
 };
 
 export const addOrUpdateExpense = async ({ formData, id = null }) => {
-  let url =
-    ApiConstants.BASEURL + ApiConstants.GETEXPENSES + `${id ? `/${id}` : ""}`;
+  let url = API_BASE_URL + API_ENDPOINTS.GETEXPENSES + `${id ? `/${id}` : ""}`;
   let config = {
     method: id ? "PUT" : "POST",
     data: formData,
