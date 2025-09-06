@@ -1,0 +1,85 @@
+.expense {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    color: #212121;
+
+    &__container {
+        padding: 24px 16px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 600px;
+
+        img {
+            width: 12%;
+            ;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+
+        &-fields {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 6px;
+            width: 100%;
+            color: #757575;
+            position: relative;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    &__app-name {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 12px
+    }
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    &__error {
+        color: #F44336;
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .expense {
+        &__container {
+            width: 70%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .expense {
+        &__container {
+            width: 90%;
+        }
+
+        &__btn {
+            flex-direction: column-reverse;
+            align-items: stretch;
+        }
+    }
+}

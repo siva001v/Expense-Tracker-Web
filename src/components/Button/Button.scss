@@ -1,0 +1,74 @@
+.btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background-color: #6C63FF;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: 500;
+
+    &.secondary {
+        background-color: #fff;
+        border: 1px solid #6C63FF;
+        color: #6C63FF;
+    }
+
+    &.cancel {
+        border: 1px solid #F44336;
+        color: #F44336;
+        background-color: #fff;
+    }
+
+    &.filter {
+        color: #212121;
+        background-color: #ddd;
+        border: 1px solid transparent;
+
+        &.open {
+            background-color: #6b62ff;
+            color: #fff;
+        }
+    }
+
+    &.success {
+        background-color: #4CAF50;
+                color: #fff;
+    }
+
+    &.fail {
+        color: #FFF;
+        background-color: #F44336;
+    }
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 0px 2px rgba(107, 99, 255, 0.712);
+}
+
+.btn.secondary:hover {
+    box-shadow: 0px 0px 2px rgba(107, 99, 255, 0.712);
+}
+
+.btn.cancel:hover {
+    box-shadow: 0px 0px 0px 2px rgb(244, 67, 54, 0.2);
+}
+
+.btn.filter:hover {
+    box-shadow: 0px 0px 0px 2px rgba(122, 122, 122, 0.4);
+}
+
+.btn.open:hover {
+    box-shadow: 0px 0px 0px 2px rgba(107, 99, 255, 0.712);
+}
+
+.btn.success:hover {
+    box-shadow: 0px 0px 0px 2px rgba(76, 175, 79, 0.705);
+}
+
+.btn.fail:hover {
+    box-shadow: 0px 0px 0px 2px rgb(244, 67, 54, 0.2);
+}

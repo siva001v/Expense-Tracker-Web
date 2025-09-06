@@ -1,16 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Home from "./pages/Home";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Home from "./pages/Home/Home";
 import { ProtectedRoute } from "./pages/ProtectedRoute";
-import { Register } from "./pages/Register";
-import ExpenseForm from "./pages/ExpenseForm";
+import { Register } from "./pages/Register/Register";
+import ExpenseForm from "./pages/ExpenseForm/ExpenseForm";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ToastContainer } from "react-toastify";
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
+import Profile from "./pages/Profile/Profile";
+import Settings from "./pages/Settings/Settings";
 import { UserProvider } from "./context/UserContext";
 
 function App() {

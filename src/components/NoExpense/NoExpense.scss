@@ -1,0 +1,33 @@
+.noexpense {
+    border-radius: 8px;
+    width: 100%;
+    background-color: #fff;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 18px 24px;
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .noexpense__description {
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 768px) {
+    .noexpense {
+        padding: 46px 24px;
+    }
+}

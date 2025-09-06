@@ -1,0 +1,137 @@
+.dashboard {
+    height: 100vh;
+    color: #212121;
+
+    &__container {
+        background-color: #f3f4f6;
+        padding: 12px 16px;
+        height: 90%;
+
+        &-header {
+            height: 4%;
+        }
+    }
+
+    &__main {
+        display: flex;
+        height: 96%;
+        gap: 14px;
+    }
+
+    &__statistics {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__content {
+        height: 98%;
+        width: 60%;
+        background-color: #fff;
+        padding: 18px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        border-radius: 8px;
+        border: 1px solid #E0E0E0;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+        &-header {
+            display: flex;
+            align-items: center;
+
+            h3 {
+                flex: 30%;
+            }
+
+            &-action {
+                display: flex;
+                align-items: center;
+                flex: 60%;
+                justify-content: end;
+                gap: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .dashboard {
+
+        &__statistics {
+            width: 50%;
+        }
+
+        &__content {
+            width: 50%;
+            gap: 12px;
+
+            &-header {
+                flex-direction: column-reverse;
+                gap: 20px;
+                align-items: start;
+
+                &-action {
+                    width: 100%;
+                    justify-content: start;
+
+                    button {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .dashboard {
+        min-height: 100vh;
+
+        &__container {
+            height: auto;
+            gap: 12px;
+        }
+
+        &__container-header {
+            height: 40px;
+            padding: 4px 0px;
+        }
+
+        &__main {
+            flex-direction: column;
+
+            &::after {
+                content: "";
+                padding: 1px;
+            }
+        }
+
+        &__statistics {
+            width: auto;
+        }
+
+        &__content {
+            width: auto;
+            height: 800px;
+
+            &-header {
+                flex-direction: column-reverse;
+                gap: 20px;
+                align-items: start;
+
+                &-action {
+                    width: 100%;
+                    justify-content: start;
+
+                    button {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}

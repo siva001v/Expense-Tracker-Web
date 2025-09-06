@@ -1,0 +1,68 @@
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5F5F5;
+    color: #212121;
+
+    &__logo {
+        width: 50px;
+    }
+
+    &__container {
+        background-color: #FFF;
+        text-align: center;
+        padding: 24px 16px;
+        border-radius: 12px;
+        width: 600px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &__app-name {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__error {
+        color: #F44336;
+        margin-top: 4px;
+    }
+
+    &__login {
+        margin-top: 12px;
+
+        &-link {
+            color: #6c63ff;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .register {
+        &__container {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .register {
+        &__container {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.trends {
+    width: 100%;
+    height: 40.5%;
+    background-color: #fff;
+    padding: 18px 24px;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__line-chart {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .trends {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trends {
+        height: auto;
+        font-size: 11px;
+
+        &__line-chart {
+            height: 250px;
+        }
+    }
+}
