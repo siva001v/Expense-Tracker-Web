@@ -33,7 +33,7 @@ Link => https://imaginative-mochi-ae0588.netlify.app
 
    ```bash
    git clone https://github.com/siva001v/Expense-Tracker-Web.git
-   cd expense-tracker-frontend
+   cd expense-tracker-web
 
    ```
 
